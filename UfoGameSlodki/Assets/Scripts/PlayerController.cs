@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D Rigidbody2D;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,6 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        Rigidbody2D.AddForce(movement);
+        Rigidbody2D.AddForce(movement*speed);
     }
 }
