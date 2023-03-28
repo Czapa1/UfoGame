@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (score >= 5)
         {
             winText.gameObject.SetActive(true);
+            scoreText.gameObject.SetActive(false);
         }
 
     }
