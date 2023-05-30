@@ -1,23 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-[System.Serializable]
 public class AudioManager : MonoBehaviour
-
 {
-    public Sound[] sound1;
-    public Sound[] sound2;
+    public Sound[] music;
+    public Sound[] sfx;
     public AudioSource musicSource, sfxSource;
-    // Start is called before the first frame update
-    void Start()
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(music, x => x.name == name);
+        if (s==null)
+        {
+            Debug.Log("Sounud not found");
+        }
+        else
+        {
+            musicSource.clip = s.audioClip;
+            musicSource.Play();
+        }
+    }
+    public void PlaySfx(string name)
     {
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    // Start is called
 }
