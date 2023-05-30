@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         score = 0;
+        AudioManager.instance.PlayMusic("Muzyka");
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Pickup"))
         {
             Destroy(collision.gameObject);
+            AudioManager.instance.PlaySfx("Pickup");
             score++;
             ScoreUpdate(score);
         }

@@ -1,16 +1,33 @@
 using System;
+using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] music;
     public Sound[] sfx;
     public AudioSource musicSource, sfxSource;
+
+    public static AudioManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(music, x => x.name == name);
-        if (s==null)
+        if (s == null)
         {
-            Debug.Log("Sounud not found");
+            Debug.Log("Sound not found");
         }
         else
         {
@@ -20,7 +37,14 @@ public class AudioManager : MonoBehaviour
     }
     public void PlaySfx(string name)
     {
-
+        Sound s = Array.Find(sfx, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.audioClip);
+        }
     }
-    // Start is called
 }

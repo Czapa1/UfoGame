@@ -572,7 +572,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ce5efd6b6c84a8847be5700dca7034e8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -665,13 +665,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678131443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6534793, y: 6.1966243, z: -0.18092571}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.529634, y: 3.9041214, z: -0.111337714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1525275988}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &728339673
 PrefabInstance:
@@ -1061,7 +1061,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f842c9f0dae2fa644b681f60b2ed5e7f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1154,13 +1154,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977266777}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6534793, y: 6.1966243, z: -0.18092571}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.529634, y: 3.9041214, z: -0.111337714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1525275988}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1418358771 stripped
 Transform:
@@ -1196,6 +1196,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efa5c99c98c2fc4bb5f3f36fe156c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music:
+  - name: Muzyka
+    audioClip: {fileID: 8300000, guid: f842c9f0dae2fa644b681f60b2ed5e7f, type: 3}
+  sfx:
+  - name: Collision
+    audioClip: {fileID: 8300000, guid: ce5efd6b6c84a8847be5700dca7034e8, type: 3}
+  - name: Pickup
+    audioClip: {fileID: 8300000, guid: dcc87bcafd0922a4db7f3798e15bcae3, type: 3}
+  - name: UfoFly
+    audioClip: {fileID: 8300000, guid: 4375f1eb2274e5e4fafa98d7ca14bc29, type: 3}
   musicSource: {fileID: 977266778}
   sfxSource: {fileID: 678131444}
 --- !u!4 &1525275988
@@ -1209,7 +1219,9 @@ Transform:
   m_LocalPosition: {x: 9.183114, y: 2.2925029, z: -0.069588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 977266779}
+  - {fileID: 678131445}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
